@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"tgbot/internal/clients/telegram"
 )
@@ -13,6 +14,7 @@ const (
 func main() {
 
 	tg := telegram.New(tgUrl, mustToken())
+	fmt.Println(tg)
 }
 
 func mustToken() string {

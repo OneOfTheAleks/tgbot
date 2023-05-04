@@ -52,7 +52,7 @@ func (c *Client) Update(offset, limit int) ([]Message, error) {
 		return nil, clients.Wrap(errMsg, err)
 	}
 
-	var res response
+	var res Response
 	err = json.Unmarshal(data, &res)
 	if err != nil {
 		return nil, clients.Wrap(errParse, err)
